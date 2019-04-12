@@ -60,3 +60,22 @@ func (this *Array) Find(index uint) (int, error) {
 	return this.data[index],nil
 }
 
+//插入数值到索引index上
+func (this *Array) Insert(index uint, v int) error {
+	if this.Len() == uint(cap(this.data)) {
+		return errors.New("full array")
+	}
+
+	if index != this.length && this.isIndexOutOfRange(index) {
+		return errors.New("out of index range")
+	}
+
+	for i := this.length; i > index; i -- {
+		this.data[i] = this.data[i-1]
+	}
+
+	this.data[index] = v
+	this.length++
+
+	return nil
+}
