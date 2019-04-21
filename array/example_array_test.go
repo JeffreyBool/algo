@@ -9,9 +9,41 @@ package array_test
 
 import (
 	"algo/array"
-	"log"
 	"fmt"
+	"log"
 )
+
+/**
+* 结构体和方法实现:
+type Array struct {
+	// Has unexported fields.
+}
+
+func NewArray(capacity ...int) (array *Array)
+func (array *Array) Add(index int, value interface{}) (err error)
+func (array *Array) AddFirst(value interface{}) error
+func (array *Array) AddLast(value interface{}) error
+func (array *Array) Clear()
+func (array *Array) Contains(value interface{}) bool
+func (array *Array) Find(value interface{}) int
+func (array *Array) Get(index int) (value interface{}, err error)
+func (array *Array) GetCapacity() int
+func (array *Array) GetSize() int
+func (array *Array) IsEmpty() bool
+func (array *Array) PrintIn()
+func (array *Array) Remove(index int) (value interface{}, err error)
+func (array *Array) RemoveElement(value interface{}) (e interface{}, err error)
+func (array *Array) RemoveFirst() (interface{}, error)
+func (array *Array) RemoveLast() (interface{}, error)
+func (array *Array) Set(index int, value interface{}) (err error)
+*/
+
+/*
+ * 启动文档本地服务命令
+ * 进入目录: cd $GOPATH/algo/array
+ * 启动文档服务: godoc -http=:6060 -play
+ * 查看: http://127.0.0.1:6060/pkg/algo/array/
+*/
 
 //测试实例化
 func ExampleNewArray() {
