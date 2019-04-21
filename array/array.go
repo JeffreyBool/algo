@@ -9,6 +9,7 @@ package array
 
 import (
 	"errors"
+	"fmt"
 )
 
 /**
@@ -190,4 +191,17 @@ func (array *Array) removeElement(value int) (err error,e int) {
 func (array *Array) Clear() {
 	array.data = make([]int,array.length)
 	array.length = 0
+}
+
+//打印数列
+func (array *Array) Print() {
+	var format string
+	for i := 0; i <= array.Count(); i++ {
+		if i == array.Count(){
+			format += fmt.Sprintf("%+v", array.data[i])
+		}else{
+			format += fmt.Sprintf("%+v|", array.data[i])
+		}
+	}
+	fmt.Println(format)
 }
