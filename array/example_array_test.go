@@ -16,7 +16,7 @@ import (
 //实例化
 func ExampleNewArray() {
 	arr := array.NewArray(2)
-	fmt.Println(arr.Count())
+	fmt.Println(arr.GetSize())
 	fmt.Println(arr.GetCapacity())
 	//Output:
 	//0
@@ -30,9 +30,9 @@ func ExampleGetCapacity() {
 }
 
 //获取数组长度
-func ExampleArray_Count() {
+func ExampleArray_GetSize() {
 	array := array.NewArray(10)
-	fmt.Printf("len: %d \n", array.Count())
+	fmt.Printf("len: %d \n", array.GetSize())
 }
 
 //判断是否为空
@@ -49,8 +49,8 @@ func ExampleArray_Set() {
 	}
 
 	fmt.Printf("test array cap: %d \n", array.GetCapacity())
-	fmt.Printf("test array count: %d \n", array.Count())
-	array.Print()
+	fmt.Printf("test array count: %d \n", array.GetSize())
+	array.PrintIn()
 }
 
 //根据索引获取某个值
@@ -76,12 +76,12 @@ func  ExampleArray_Add() {
 	array := array.NewArray(10)
 
 	for i:= 0; i < 10; i++{
-		array.Add(uint(i),i+1)
+		array.Add(i,i+1)
 	}
 
 	fmt.Printf("test array cap: %d \n", array.GetCapacity())
-	fmt.Printf("test array count: %d \n", array.Count())
-	array.Print()
+	fmt.Printf("test array count: %d \n", array.GetSize())
+	array.PrintIn()
 }
 
 //向数组头部添加元素
@@ -89,8 +89,8 @@ func ExampleArray_AddFirst() {
 	array := array.NewArray(10)
 	array.AddFirst(1)
 	fmt.Printf("test array cap: %d \n", array.GetCapacity())
-	fmt.Printf("test array count: %d \n", array.Count())
-	array.Print()
+	fmt.Printf("test array count: %d \n", array.GetSize())
+	array.PrintIn()
 }
 
 //向数组末尾添加元素
@@ -103,8 +103,8 @@ func ExampleArray_AddLast() {
 	array.Add(4,19)
 	array.AddLast(20)
 	fmt.Printf("test array cap: %d \n", array.GetCapacity())
-	fmt.Printf("test array count: %d \n", array.Count())
-	array.Print()
+	fmt.Printf("test array count: %d \n", array.GetSize())
+	array.PrintIn()
 	fmt.Println(array)
 }
 
