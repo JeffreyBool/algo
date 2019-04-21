@@ -31,10 +31,16 @@ func TestNewArray(t *testing.T) {
 		}
 	}
 
+	if err  := array.Add(10, 11); err != nil{
+		t.Error(err)
+	}
+	t.Log(array)
+
+	if err  := array.Add(10, 12); err != nil{
+		t.Error(err)
+	}
+
 	t.Logf("test array cap: %d \n",array.GetCapacity())
 	t.Logf("test array count: %d \n",array.Count())
 	t.Log(array)
-
-	arr := make([]int,0,5)
-	t.Log(arr)
 }
