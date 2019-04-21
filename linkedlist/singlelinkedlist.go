@@ -7,6 +7,10 @@
 
 package linkedlist
 
+import (
+	"fmt"
+)
+
 type ListNode struct {
 	next   *ListNode //后续结点 next
 	value interface{}
@@ -113,4 +117,20 @@ func (linked *LinkedList) Remove(v interface{})  {
 			}
 		}
 	}
+
+	linked.size --
+}
+
+//打印链表
+func (linked *LinkedList) Print() {
+	cur := linked.head.next
+	format := ""
+	for nil != cur {
+		format += fmt.Sprintf("%+v", cur.GetValue())
+		cur = cur.next
+		if nil != cur {
+			format += "->"
+		}
+	}
+	fmt.Println(format)
 }
