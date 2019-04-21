@@ -74,7 +74,7 @@ func ExampleNewArray() {
 }
 
 //获取数组容量
-func ExampleArrayGetCapacity() {
+func ExampleArray_GetCapacity() {
 	array := array.NewArray()
 	array.AddLast("我是张高元")
 	array.PrintIn()
@@ -86,7 +86,7 @@ func ExampleArrayGetCapacity() {
 }
 
 //获取数组长度
-func ExampleArrayGetSize() {
+func ExampleArray_GetSize() {
 	array := array.NewArray()
 	fmt.Printf("array len: %d \n", array.GetSize())
 	//Output:
@@ -94,7 +94,7 @@ func ExampleArrayGetSize() {
 }
 
 //判断是否为空
-func ExampleArrayIsEmpty() {
+func ExampleArray_IsEmpty() {
 	array := array.NewArray()
 	fmt.Printf("array empty: %t \n", array.IsEmpty())
 	//Output:
@@ -102,7 +102,7 @@ func ExampleArrayIsEmpty() {
 }
 
 //向数组头部添加元素
-func ExampleArrayAddFirst() {
+func ExampleArray_AddFirst() {
 	array := array.NewArray()
 	array.AddFirst("array add first")
 	array.AddLast("array add last")
@@ -114,7 +114,7 @@ func ExampleArrayAddFirst() {
 }
 
 //向数组末尾添加元素
-func ExampleArrayAddLast() {
+func ExampleArray_AddLast() {
 	array := array.NewArray()
 	array.Add(0, 19)
 	array.Add(1, 19)
@@ -129,7 +129,7 @@ func ExampleArrayAddLast() {
 }
 
 //动态添加元素
-func ExampleArrayAdd() {
+func ExampleArray_Add() {
 	strs := []string{"A", "B", "C", "D", "E", "F"}
 	array := array.NewArray()
 	for i := 0; i < len(strs); i++ {
@@ -145,7 +145,7 @@ func ExampleArrayAdd() {
 }
 
 //根据索引获取某个值
-func ExampleArrayGet() {
+func ExampleArray_Get() {
 	array := array.NewArray(10)
 	array.Add(0, 10)
 	if value, err := array.Get(0); err != nil {
@@ -158,7 +158,7 @@ func ExampleArrayGet() {
 }
 
 //根据索引修改某个值
-func ExampleArraySet() {
+func ExampleArray_Set() {
 	array := array.NewArray()
 	array.AddFirst("array add first")
 	array.PrintIn()
@@ -172,7 +172,7 @@ func ExampleArraySet() {
 }
 
 //判断数组是否存在某个值
-func ExampleArrayContains() {
+func ExampleArray_Contains() {
 	array := array.NewArray()
 	if array.Contains("我是张三") {
 		fmt.Println("找到了")
@@ -189,7 +189,7 @@ func ExampleArrayContains() {
 }
 
 //查询一个值的索引位置
-func ExampleArrayFind() {
+func ExampleArray_Find() {
 	array := array.NewArray(10)
 	array.AddFirst("我是张三")
 	array.AddFirst("我是张三")
@@ -204,7 +204,7 @@ func ExampleArrayFind() {
 }
 
 //根据索引删除元素
-func ExampleArrayRemove() {
+func ExampleArray_Remove() {
 	array := array.NewArray()
 	strs := []string{"A", "B", "C", "D", "E", "F"}
 	for index, str := range strs {
@@ -222,7 +222,7 @@ func ExampleArrayRemove() {
 }
 
 //删除头部元素
-func ExampleArrayRemoveFirst() {
+func ExampleArray_RemoveFirst() {
 	array := array.NewArray()
 	strs := []string{"A", "B", "C", "D", "E", "F"}
 	for index, str := range strs {
@@ -240,7 +240,7 @@ func ExampleArrayRemoveFirst() {
 }
 
 //删除末尾元素
-func ExampleArrayRemoveLast() {
+func ExampleArray_RemoveLast() {
 	array := array.NewArray()
 	strs := []string{"A", "B", "C", "D", "E", "F"}
 	for index, str := range strs {
@@ -258,7 +258,7 @@ func ExampleArrayRemoveLast() {
 }
 
 //删除指定元素
-func ExampleArrayRemoveElement() {
+func ExampleArray_RemoveElement() {
 	array := array.NewArray()
 	strs := []string{"A", "B", "C", "D", "E", "F"}
 	for index, str := range strs {
@@ -276,7 +276,7 @@ func ExampleArrayRemoveElement() {
 }
 
 //清空元素
-func ExampleArrayClear() {
+func ExampleArray_Clear() {
 	array := array.NewArray()
 	strs := []string{"A", "B", "C", "D", "E", "F"}
 	for index, str := range strs {
@@ -294,7 +294,7 @@ func ExampleArrayClear() {
 }
 
 //打印输出
-func ExampleArrayPrintIn() {
+func ExampleArray_PrintIn() {
 	array := array.NewArray()
 	strs := []string{"A", "B", "C", "D", "E", "F"}
 	for index, str := range strs {
