@@ -15,7 +15,10 @@ import (
 //实例化
 func TestNewArrayStack(t *testing.T) {
 	stack := stack.NewArrayStack()
-	t.Log(stack)
+	stack.PrintIn()
+	//Output:
+	//Stack: Array: size = 0 , capacity = 10
+	//[] top
 }
 
 //获取栈长度
@@ -67,6 +70,10 @@ func TestArrayStack_Peek(t *testing.T) {
 	peek := stack.Peek()
 	t.Logf("stack peek: %+v \n",peek)
 	stack.PrintIn()
+	//Output:
+	//stack peek: F
+	//Stack: Array: size = 6 , capacity = 10
+	//[A, B, C, D, E, F] top
 }
 
 //格式化输出
