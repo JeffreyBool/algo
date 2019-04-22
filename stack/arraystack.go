@@ -39,7 +39,7 @@ func (stack *ArrayStack) GetSize() int {
 
 //判断栈是否为空
 func (stack *ArrayStack) IsEmpty() bool {
-	return stack.IsEmpty()
+	return stack.array.IsEmpty()
 }
 
 //压入栈顶元素
@@ -59,17 +59,20 @@ func (stack *ArrayStack) Peek() interface{} {
 }
 
 //格式化输出
-func (stack *ArrayStack) PrintIn() string {
+func (stack *ArrayStack) PrintIn()  {
 	var buffer bytes.Buffer
 	buffer.WriteString("Stack: ")
+	format := fmt.Sprintf("Array: size = %d , capacity = %d\n",stack.array.GetSize(), stack.array.GetCapacity())
+	buffer.WriteString(format)
 	buffer.WriteString("[")
 	for i := 0; i < stack.array.GetSize(); i++ {
-		buffer.WriteString(fmt.Sprint(stack.array.Get(i)))
+		value, _ := stack.array.Get(i)
+		buffer.WriteString(fmt.Sprint(value))
 		if i != stack.array.GetSize()-1 {
 			buffer.WriteString(", ")
 		}
 	}
-	buffer.WriteString("] top")
 
-	return buffer.String()
+	buffer.WriteString("] top")
+	fmt.Println(buffer.String())
 }
