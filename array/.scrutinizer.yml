@@ -1,0 +1,13 @@
+checks:
+  go: true
+build:
+  environment:
+    go:
+      version: 'go1.9.2'
+  nodes:
+    analysis:
+      tests:
+        override:
+            - govet-run
+            - golint-run
+            - go-scrutinizer-run

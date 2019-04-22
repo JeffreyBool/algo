@@ -116,6 +116,16 @@ func (array *Array) Get(index int) (value interface{}, err error) {
 	return
 }
 
+//获取头部元素
+func (array *Array) GetFirst() (interface{}, error) {
+	return array.Get(0)
+}
+
+//获取尾部元素
+func (array *Array) GetLast() (interface{}, error) {
+	return array.Get(array.size -1)
+}
+
 //修改 index 位置的元素
 func (array *Array) Set(index int, value interface{}) (err error) {
 	if array.checkIndex(index) {
